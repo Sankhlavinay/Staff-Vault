@@ -1,0 +1,43 @@
+<div class="col-lg-12">
+	<%= flash[:notice] %>
+	<div class="card mt-5 mb-5 rounded-0">
+		<div class="card-body">
+			<h2 class="text-center">Listing Documents </h2>
+		</div>
+	</div>
+	<%= link_to "Create New Dcoument", new_document_path, class: "btn btn-primary btn-lg mb-4 rounded-0" %>
+	<table class='table table-bordered' >
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Doc Type</th>
+				<th>Employee</th>
+				<th>Action</th> 
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @documents.each do |document| %>
+			<tr>
+				<td><%= document.name %> </td>
+				<td><%= document.doc_type %></td>
+				<td><%= link_to document.employee.name, employee_path(document.employee) %></td> 
+				<td>
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Actions
+						</button>
+						<ul class="dropdown-menu">
+							<li><%= link_to "Edit", edit_document_path(document), class: "btn dropdown-item" %>
+							</li>
+							<li><%= link_to "View", document_path(document), class: "btn dropdown-item" %></li>
+							<li><%= link_to "Delete", document_path(document), class: "btn dropdown-item", method: :delete, data: {confirm: 'Are you sure to delete this Document?'} %></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+

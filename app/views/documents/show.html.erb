@@ -1,0 +1,18 @@
+<div class="col-lg-12">
+	<div class="card mt-5 mb-5 rounded-0">
+		<div class="card-body">
+			<h2 class="text-center">Document Information</h2>
+			<div class="row mt-5">
+				<div class="col-lg-6">
+					<%  if @document.image.attached? %>
+						<%= image_tag @document.image, class: 'img-fluid' %>
+					<% end %>
+					<p class="lead"><strong>Name:</strong><%= @document.name %></p>
+					<p class="lead"><strong>Type:</strong><%= @document.doc_type %></p>
+					<p class="lead"><strong>Employee:</strong><%= @document.employee.name %></p>
+					<%= link_to 'Back To Documents', documents_path, class: "btn btn-outline-primary btn-lg rounded-0" %>
+					<%= link_to 'Edit Documents', edit_document_path(@document), class: "btn btn-primary btn-lg rounded-0" %>
+			</div>
+		</div>
+	</div>
+</div>
