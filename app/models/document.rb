@@ -1,6 +1,6 @@
 class Document < ApplicationRecord
 
-  DOC_TYPES = ['Marksheet', 'Photo ID', 'Address Proof', 'Personal ID', 'Others']
+  DOC_TYPES = ['Marksheet', 'Photo ID', 'Address Proof', 'Personal ID', 'Others'].freeze
 
   belongs_to :employee
 

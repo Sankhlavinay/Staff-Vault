@@ -71,3 +71,6 @@ group :test do
   gem "webdrivers"
 end
 gem 'cssbundling-rails'
+gem 'devise'
+gem 'erb-formatter'
+gem 'htmlbeautifier'
