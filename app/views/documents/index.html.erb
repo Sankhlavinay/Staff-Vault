@@ -24,11 +24,11 @@
 				<td><%= link_to document.employee.name, employee_path(document.employee) %></td> 
 				<td>
 					<div class="dropdown">
-						<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<button class="btn btn-primary dropdown-toggle rounded-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Actions
 						</button>
 						<ul class="dropdown-menu">
-							<li><%= link_to "Edit", edit_document_path(document), class: "btn dropdown-item" %>
+							<li><%= link_to "Edit", edit_document_path(document), class: "btn dropdown-item " %>
 							</li>
 							<li><%= link_to "View", document_path(document), class: "btn dropdown-item" %></li>
 							<li><%= link_to "Delete", document_path(document), class: "btn dropdown-item", method: :delete, data: {confirm: 'Are you sure to delete this Document?'} %></li>

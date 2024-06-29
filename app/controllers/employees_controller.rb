@@ -3,7 +3,8 @@ class EmployeesController < ApplicationController
 	before_action :set_employee, only: [:edit, :update, :show, :destroy]
 
 	def index
-		@employees = Employee.all
+		@q = Employee.ransack(params[:q])
+    @employees = @q.result(distinct: true)
 	end	
 
 	def new
