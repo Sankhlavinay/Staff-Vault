@@ -11,6 +11,8 @@ class User < ApplicationRecord
          authentication_keys: [:login]
 
   validates :username, presence: true, uniqueness: true
+  validates :contact_number, numericality: true, length: { minimum: 10, maximum: 10 }
+  validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/ , message: "Only Letters are allowed" }, presence: true
 
   attr_accessor :login
 
