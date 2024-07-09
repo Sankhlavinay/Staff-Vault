@@ -77,3 +77,5 @@ gem 'erb-formatter'
 gem 'htmlbeautifier'
 gem 'ransack'
 gem 'toastr-rails'
+gem 'rename'
+gem "faker"

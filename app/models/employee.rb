@@ -31,4 +31,14 @@ class Employee < ApplicationRecord
     [ "city", "country", "date_of_birth", "date_of_joining", "first_name", "id", "job_title", "last_name", "middle_name", "personal_email", "state", "name"]
   end
 
+  JOB_TITLE = [
+    "Senior ROR Developer",
+    "Junior ROR Developer",
+    "Full Stack ROR Developer",
+    "Senior Full Stack MERN Developer",
+    "Junior Full Stack MERN Developer",
+    "Junior Full Stack Java Developer",
+    "Senior Full Stack Java Developer"
+  ].freeze
+
 end
