@@ -2,7 +2,7 @@ class DocumentsController < ApplicationController
 	before_action :set_document, only: [:edit, :update, :show, :destroy]
 
 	def index
-		@documents = Document.includes(:document)
+		@documents = Document.includes(:employee)
 	end	
 
 	def new

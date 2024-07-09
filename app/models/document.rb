@@ -7,4 +7,5 @@ class Document < ApplicationRecord
   has_one_attached :image
 
   validates :name, :doc_type, presence: true
+ 
 end
