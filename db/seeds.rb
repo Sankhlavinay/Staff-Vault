@@ -53,6 +53,7 @@ ActiveRecord::Base.transaction do
       last_name: Faker::Name.last_name,
       personal_email: Faker::Internet.email,
       address_line_1: Faker::Address.street_address,
+      date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65),
       city: Faker::Address.city,
       state: Faker::Address.state,
       country: Faker::Address.country,
